@@ -50,4 +50,18 @@ fetch("https://codehs.com/lms/ajax/submit_assignment", {
   "credentials": "include"
 });
 
-location.reload();
+function footer() {
+    let element = document.createElement('div');
+
+    element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20px; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center; z-index: 99999;`;
+    element.innerHTML = `<p>Turned in assignment. Refreshing in 3 seconds.</p>`;
+    element.id = "doxrMenu";
+
+    document.body.appendChild(element);
+}
+
+footer();
+
+setTimeout(function() {
+    location.reload();
+}, 3000);
