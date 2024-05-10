@@ -49,3 +49,5 @@ fetch("https://codehs.com/lms/ajax/submit_assignment", {
   "mode": "cors",
   "credentials": "include"
 });
+
+location.reload();
