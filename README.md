@@ -18,6 +18,12 @@ Then, click on it, and the script will refresh and go to the next assignment. Th
 
 **Yes**, copy all of the code in main.js and paste it in devtools console.
 
+### Can I do a bunch of assignments at once?
+
+**Yes**, but you'll need **[TamperMonkey](https://www.tampermonkey.net/)**. Copy all of the code from `monkey.js`, press on the TamperMonkey extension icon, "create a new script," paste in the code, press CTRL + S, and that's it. Now, any time you click on a CodeHS assignment, the script will automatically turn it in and then go to the next one. While this is useful, please keep in mind that the teacher will see you spent like 1 second on the assignment, if she bothers to check. Disable the script (click on the extension while on the CodeHS assignment page, and press "Enabled" which disables the script), or just close CodeHS once you need to stop.
+
+**This way, you can do literal units in the background, incredibly fast.**
+
 ### What if Bookmarklets/JS/Devtools are blocked?
 
 You'll need to use this with another personal device, or unenroll.
