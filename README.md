@@ -1,7 +1,7 @@
 # CodeHS-Submit-Tool
 Immediately submit a CodeHS lesson, regardless of the code.
 
-> Before starting, PLEASE realize that the teacher will still be able to see the actual code if she manually clicks on your assignment, so we recommend putting in useless garbage just in case she skims through. Yes, the teacher will see this as a normally completed assignment, and it won't trigger any CodeHS anti-cheats.
+> Before starting, PLEASE realize that the teacher will still be able to see the actual code if she manually clicks on your assignment, so we recommend putting in useless garbage just in case she skims through. Yes, the teacher will see this as a normally completed assignment at glance, but if you're teacher isn't lazy, this could look suspicious, [see anti-cheating measures](https://help.codehs.com/en/articles/990684-preventing-student-cheating). Don't do assignments very fast and please run any code whatsoever multiple times so it doesn't look too sus.
 
 ## How do I use it?
 
