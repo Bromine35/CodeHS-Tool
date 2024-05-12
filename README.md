@@ -27,5 +27,3 @@ You'll need to use this with another personal device, or unenroll.
 - Bromine35
   
 (doxr) - everything
-
-This will probably get patched when the actual code is verified to work on the serverside or something.
