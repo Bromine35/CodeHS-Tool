@@ -28,6 +28,17 @@ function createToken() { // lol just grab cookie and call it the token
     return csrfToken;
 }
 
+function incrementation(url) {
+    const parsed = new URL(url);
+    let segs = parsed.pathname.split('/');
+    if (!isNaN(segs[segs.length - 1])) {
+        segs[segs.length - 1] = parseInt(segs[segs.length - 1]) + 1;
+    }
+    const newPath = segs.join('/');
+    parsed.pathname = newPath;
+    return parsed.toString();
+}
+
 fetch("https://codehs.com/lms/ajax/submit_assignment", {
   "headers": {
     "accept": "application/json, text/javascript, */*; q=0.01",
@@ -54,7 +65,7 @@ function footer() {
     let element = document.createElement('div');
 
     element.style = `font-family: "Nunito", sans-serif; font-size: 14px; height: 65px; width: 175px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20px; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center; z-index: 99999;`;
-    element.innerHTML = `<p>Turned in assignment. Refreshing in 3 seconds.</p>`;
+    element.innerHTML = `<p>Turned in assignment. Going to the next assignment.</p>`;
     element.id = "doxrMenu";
 
     document.body.appendChild(element);
@@ -63,5 +74,6 @@ function footer() {
 footer();
 
 setTimeout(function() {
-    location.reload();
-}, 3000);
+    // gawdamn why is it so complicated
+    location.href = incrementation(createReferrer());
+}, 100);

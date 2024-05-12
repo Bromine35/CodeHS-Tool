@@ -10,9 +10,9 @@ Create a *bookmark*(let), make this the URL:
 javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/main.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
 ```
 
-Then, click on it, and the script will refresh the page. The little indicator for the page will show as green, and the lesson looks completed without you doing anything.
+Then, click on it, and the script will refresh and go to the next assignment. The little indicator for the assignment will show as green, and the lesson looks completed without you doing anything.
 
-**This is only for actual coding lessons, we don't have a script for quizzes.
+**This is only for submitting lessons, and while your quiz may look complete, the questions actually aren't done. Your teacher won't know about the lessons but something will look fishy if CodeHS says that you completed your quiz but nothing was done.
 
 ### Is there another way to use it?
 
@@ -27,3 +27,5 @@ You'll need to use this with another personal device, or unenroll.
 - Bromine35
   
 (doxr) - everything
+
+This will probably get patched when the actual code is verified to work on the serverside or something.
