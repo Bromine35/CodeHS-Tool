@@ -5,12 +5,21 @@
         var self = this;
         var originalSend = this.send.bind(this);
         this.send = function(payload) {
-            if (url.includes('/editor/ajax/save_keystroke')) {
+            console.log("found POST request, detecting paste");
+            if (typeof payload === 'string' && payload.includes('&reason=paste')) {
+                console.log("DETECTED PASTE");
+                // Abort the request
                 self.abort();
                 return false;
-            } else {
-                return originalSend.apply(self, arguments);
             }
+
+            if (url.includes('/editor/ajax/save_keystroke')) {
+                console.log("Detected keystroke save attempt, aborting.");
+                self.abort();
+                return false;
+            }
+
+            return originalSend.apply(self, arguments);
         };
         originalOpen.call(this, method, url, async, user, password);
     };

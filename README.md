@@ -43,6 +43,33 @@ Then, click on it. It will look like nothing's happening, but when you paste cod
 
 **This way, you can do literal units in the background, incredibly fast.**
 
+### KillLogger
+We don't really know what this does but it's probably useful.
+
+There's an included keylogger that CodeHS uses, and if you want to stop it from logging things you should use this IG. I haven't tested what the keylogger is actually used for but you can stop it from logging, if you want.
+
+```
+javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/killogger.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
+```
+
+### Extras
+
+<details>
+<summary>CopyJail + KillLogger + Answerkey</summary>
+<br>
+```
+javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/jailloggeranswer.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
+```
+</details>
+
+<details>
+<summary>CopyJail + KillLogger</summary>
+<br>
+```
+javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/jaillogger.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
+```
+</details>
+
 ### What if Bookmarklets/JS/Devtools are blocked?
 
 You'll need to use this with another personal device, or unenroll.
@@ -52,3 +79,5 @@ You'll need to use this with another personal device, or unenroll.
 - Bromine35
   
 (doxr) - everything
+
+Licensed under GNU GPL v3.
