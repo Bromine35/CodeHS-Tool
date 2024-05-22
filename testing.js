@@ -64,7 +64,7 @@ function createReferrer() {
 function footer() {
   let element = document.createElement('div');
 
-  element.style = `font-family: "Nunito", sans-serif; font-size: 10px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20px; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center; z-index: 99999;`;
+  element.style = `font-family: "Nunito", sans-serif; font-size: 10px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20px; right: 20px; height: 75%; width: 35%; border-radius: 10px; color: rgb(0, 0, 0); text-align: center; z-index: 99999;`;
   element.innerHTML = ``;
   element.id = "doxrMenu";
 
@@ -77,5 +77,5 @@ function additionalUnescaping() {
   let element = document.getElementById("doxrMenu");
   let unescape = element.innerHTML + '';
   let escap = unescape.replace(/\\n/g, '\n');
-  element.innerHTML = escap;
+  element.innerHTML = "<pre><code>\n" + escap + "\n</pre></code>";
 }
