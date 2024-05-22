@@ -57,17 +57,21 @@ javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@
 <details>
 <summary>CopyJail + KillLogger + Answerkey</summary>
 <br>
+  
 ```
 javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/jailloggeranswer.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
 ```
+
 </details>
 
 <details>
 <summary>CopyJail + KillLogger</summary>
 <br>
+  
 ```
 javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/jaillogger.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
 ```
+
 </details>
 
 ### What if Bookmarklets/JS/Devtools are blocked?
