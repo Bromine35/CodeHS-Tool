@@ -24,6 +24,18 @@ Then, click on it, and the script will refresh and go to the next assignment. Th
 
 **This way, you can do literal units in the background, incredibly fast.**
 
+### Can I get the Answer Key for a lesson?
+
+**Yes**, create aother *bookmark*(let), make this the URL:
+
+```
+javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/answer.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
+```
+
+and click it while on a lesson. The teacher's answer key will pop up.
+
+> Remember to not copy-paste the key (yet), since teachers can see when you do that. We also highly recommend that you rewrite that code.
+
 ### What if Bookmarklets/JS/Devtools are blocked?
 
 You'll need to use this with another personal device, or unenroll.
