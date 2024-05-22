@@ -77,6 +77,7 @@ function additionalUnescaping() {
   let element = document.getElementById("doxrMenu");
   let unescape = element.innerHTML + '';
   let escap = unescape.replace(/\\n/g, '\n');
-  console.log(escap)
+  escap = escap.replace(/\\t/g, '    ');
+  console.log(escap);
   element.innerHTML = "<pre><code>\n" + escap + "\n</pre></code>";
 }
