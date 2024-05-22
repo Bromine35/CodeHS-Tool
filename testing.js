@@ -29,14 +29,12 @@ fetch(`https://codehs.com/editor/ajax/get_solution_code?itemID=${window.pageSpec
       return arr.join('');
     }
     let decodedSolutionCode = decrypt(data.solutionCodeJson) + '';
-    console.log("Decoded Solution Code:", decodedSolutionCode); // Debugging line
     function unescapeString(input) {
       return input.replace(/\n/g, '\n');
     }
-    console.log("Before Unescaping:", decodedSolutionCode); // Debugging line
     let unescapedSolutionCode = unescapeString(decodedSolutionCode);
-    console.log("After Unescaping:", unescapedSolutionCode); // Debugging line
     document.getElementById("doxrMenu").innerHTML = removeFirstAndLast(unescapedSolutionCode)
+    additionalUnescaping();
   } else {
       console.error('Failed to retrieve solution code.');
   }
@@ -74,3 +72,10 @@ function footer() {
 }
 
 footer();
+
+function additionalUnescaping() {
+  let element = document.getElementById("doxrMenu");
+  let unescape = element.innerHTML + '';
+  let escap = unescape.replace(/\\n/g, '\n');
+  element.innerHTML = escap;
+}
