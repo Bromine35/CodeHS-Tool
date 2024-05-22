@@ -22,8 +22,21 @@ fetch(`https://codehs.com/editor/ajax/get_solution_code?itemID=${window.pageSpec
 })
 .then(data => {
   if (data.status === "ok") {
-      let decodedSolutionCode = decrypt(data.solutionCodeJson);
-      console.log(unescape(decodedSolutionCode))
+    function removeFirstAndLast(str) {
+      const arr = str.split('');
+      arr.shift(); // Removes the first character
+      arr.pop();   // Removes the last character
+      return arr.join('');
+    }
+    let decodedSolutionCode = decrypt(data.solutionCodeJson) + '';
+    console.log("Decoded Solution Code:", decodedSolutionCode); // Debugging line
+    function unescapeString(input) {
+      return input.replace(/\n/g, '\n');
+    }
+    console.log("Before Unescaping:", decodedSolutionCode); // Debugging line
+    let unescapedSolutionCode = unescapeString(decodedSolutionCode);
+    console.log("After Unescaping:", unescapedSolutionCode); // Debugging line
+    document.getElementById("doxrMenu").innerHTML = removeFirstAndLast(unescapedSolutionCode)
   } else {
       console.error('Failed to retrieve solution code.');
   }
@@ -49,3 +62,15 @@ function createReferrer() {
     let hash = window.location.hash;
     return protocol + "//" + hostname + port + pathname + search + hash;
 }
+
+function footer() {
+  let element = document.createElement('div');
+
+  element.style = `font-family: "Nunito", sans-serif; font-size: 10px; border: 4px solid rgb(15, 15, 15); background: rgb(240, 240, 240); position: absolute; top: 20px; left: 20px; border-radius: 10px; color: rgb(0, 0, 0); text-align: center; z-index: 99999;`;
+  element.innerHTML = ``;
+  element.id = "doxrMenu";
+
+  document.body.appendChild(element);
+}
+
+footer();
