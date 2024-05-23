@@ -7,9 +7,8 @@
         this.send = function(payload) {
             console.log("found POST request, detecting paste");
 
-            if (typeof payload === 'string' && payload.includes('&reason=paste')) {
+            if (typeof payload === 'string' && payload.includes('&reason=paste') || url.includes('/editor/ajax/save_keystroke')) {
                 console.log("DETECTED PASTE");
-                // Abort the request
                 self.abort();
                 return false;
             } else {
