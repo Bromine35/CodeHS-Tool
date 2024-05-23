@@ -30,11 +30,11 @@ Then, click on it, and the script will refresh and go to the next assignment. Th
 
 Stop the teacher from seeing that you copy-pasted code.
 
-You will need to open DevTools console (use CTRL+SHIFT+J or Right Click, then inspect element, then choose the console tab), copy all of the code in `copyjail.js` found in this repo, type "allow pasting" and then press enter, and then paste the code in and press enter. After that you can close DevTools.
+First, copy all of the code from `copyjailbookmarklet.js`, create a *bookmark*(let) and make that code the URL.
 
-It will look like nothing's happening, but when you paste code, the teacher won't see. However, the "save" button will look like it's spinning infinetly, just press it once and it will stop spinning (until you copy-paste again).
+Then, click on it. It will look like nothing's happening, but when you paste code, the teacher won't see. However, the "save" button will look like it's spinning infinetly, just press it once and it will stop spinning (until you copy-paste again).
 
-> `extra.js` does CopyJail and the answer key grabber at the same time, use that instead of `copyjail.js` if you want.
+> `extrabookmarklet.js` does CopyJail and the answer key grabber at the same time, use that instead of `copyjailbookmarklet.js` if you want.
 
 ### Tampermonkey Script
 
