@@ -105,8 +105,10 @@ footer();
 function additionalUnescaping() {
   let element = document.getElementById("doxrMenu");
   let unescape = element.innerHTML + '';
-  let escap = unescape.replace(/\\n/g, '\n');
-  escap = escap.replace(/\\t/g, '    ');
-  console.log(escap);
-  element.innerHTML = "<pre><code>\n" + escap + "\n</pre></code>";
+  unescape = unescape.replace(/\\n/g, '\n');
+  unescape = unescape.replace(/\\t/g, '    ');
+  unescape = unescape.replace(/\\"/g, '"');
+  unescape = unescape.replace(/\\'/g, "'");
+  console.log(unescape);
+  element.innerHTML = "<pre><code>\n" + unescape + "\n</pre></code>";
 }
