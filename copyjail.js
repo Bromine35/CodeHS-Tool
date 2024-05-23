@@ -9,9 +9,9 @@
 
             if (typeof payload === 'string' && payload.includes('&reason=paste')) {
                 console.log("DETECTED PASTE");
-                // Change the request URL instead of aborting
-                this.url = "about:blank"
-                console.log("URL changed to:", this.url);
+                // Abort the request
+                self.abort();
+                return false;
             } else {
                 console.log("did not find paste")
             }

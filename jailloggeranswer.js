@@ -8,9 +8,9 @@
             console.log("found POST request, detecting paste");
             if (typeof payload === 'string' && payload.includes('&reason=paste')) {
               console.log("DETECTED PASTE");
-              // Change the request URL instead of aborting
-              this.url = "about:blank"
-              console.log("URL changed to:", this.url);
+              // Abort the request
+              self.abort();
+              return false;
           } else {
               console.log("did not find paste")
           }
@@ -105,10 +105,8 @@ footer();
 function additionalUnescaping() {
   let element = document.getElementById("doxrMenu");
   let unescape = element.innerHTML + '';
-  unescape = unescape.replace(/\\n/g, '\n');
-  unescape = unescape.replace(/\\t/g, '    ');
-  unescape = unescape.replace(/\\"/g, '"');
-  unescape = unescape.replace(/\\'/g, "'");
-  console.log(unescape);
-  element.innerHTML = "<pre><code>\n" + unescape + "\n</pre></code>";
+  let escap = unescape.replace(/\\n/g, '\n');
+  escap = escap.replace(/\\t/g, '    ');
+  console.log(escap);
+  element.innerHTML = "<pre><code>\n" + escap + "\n</pre></code>";
 }

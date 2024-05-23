@@ -35,7 +35,7 @@ Create a *bookmark*(let), make this the URL:
 javascript:(function(){fetch('https://cdn.jsdelivr.net/gh/Bromine35/CodeHS-Tool@main/copyjail.js').then(r=>r.text()).then(t=>eval(t)).catch(e=>console.error('Error executing script:', e))})()
 ```
 
-Then, click on it. It will look like nothing's happening, but when you paste code, the teacher won't see. Remember to save the code.
+Then, click on it. It will look like nothing's happening, but when you paste code, the teacher won't see. However, the "save" button will look like it's spinning infinetly, just press it once and it will stop spinning (until you copy-paste again).
 
 ### Tampermonkey Script
 
